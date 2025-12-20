@@ -9,7 +9,7 @@ this project is a basic dashboard for a stocking business
 
 <!-- REMPLACEZ LES LIENS CI-DESSOUS -->
 - **APPLICATION DÉPLOYÉE (Live Demo) :** [CLIQUEZ ICI POUR VOIR LE SITE](https://)
-- **Repository GitHub :** [Lien vers ce repo](https://)
+- **Repository GitHub :** [Lien vers ce repo](https://github.com/argusmaximus10/The-Supreme-Project-)
 
 ---
 
