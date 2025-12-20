@@ -15,7 +15,7 @@ this project is a basic dashboard for a stocking business
 
 ## 👥 Membres de l'Équipe
 
-**Nom du Groupe :** [Insérer le nom du groupe ici]
+Nom du Groupe : the martey supreme
 
 | Prénom & Nom | Rôle / Tâches principales | Lien Github |
 |--------------|---------------------------|-------------|
