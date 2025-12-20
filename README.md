@@ -20,14 +20,14 @@ Nom du Groupe : the martey supreme
 | Prénom & Nom | Rôle / Tâches principales | Lien Github |
 |--------------|---------------------------|-------------|
 | Anas Erchicha  | (ex: Dashboard, ChartJS)  | [@argusmaximus10](https://github.com/argusmaximus10) |
-| Rayan Ethahiri   | (ex: CRUD Utilisateurs)   | [@pseudo](https://github.com/pseudo) |
+| Rayan Ethahiri   | (ex: CRUD Utilisateurs)   | [@rayan-eth](https://github.com/rayan-eth) |
 | Adnan El hatab   | (ex: CSS, Responsive)     | [@adnane-elhattab](https://github.com/adnane-elhattab) |
 
 ---
 
 ## 📝 Thème Choisi
 <!-- Indiquez le thème choisi parmi la liste ou votre sujet personnalisé -->
-*   **Thème :** (ex: Gestion de Bibliothèque / Gestion Immobilière / Custom...)
+*   Thème : Gestion de stock 
 *   **Description :** Une brève explication du but de l'application.
 
 ---
