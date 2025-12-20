@@ -28,7 +28,7 @@ Nom du Groupe : the martey supreme
 ## 📝 Thème Choisi
 <!-- Indiquez le thème choisi parmi la liste ou votre sujet personnalisé -->
 *   Thème : Gestion de stock 
-*   **Description :** Une brève explication du but de l'application.
+*   **Description :Une application qui permet son utlisateur de gestioner tous les element et les entite liee a son projet 
 
 ---
 
@@ -36,11 +36,11 @@ Nom du Groupe : the martey supreme
 <!-- Cochez les cases [x] pour les fonctionnalités terminées. Laissez [ ] pour ce qui n'est pas fait. -->
 
 ### Fonctionnalités Principales
-- [ ] **CRUD 1 :** [Nom Entité, ex: Utilisateurs] (Create, Read, Update, Delete)
-- [ ] **CRUD 2 :** [Nom Entité]
-- [ ] **CRUD 3 :** [Nom Entité]
-- [ ] **CRUD 4 :** [Nom Entité]
-- [ ] **CRUD 5 :** [Nom Entité]
+- [ ] **CRUD 1 :** [User, ex: Utilisateurs] (Create, Read, Update, Delete)
+- [ ] **CRUD 2 :** [Products  Entité]
+- [ ] **CRUD 3 :** [Categories]
+- [ ] **CRUD 4 :** [Orders]
+- [ ] **CRUD 5 :** [Payements ]
 - [ ] **Recherche & Filtres** dans les tableaux
 - [ ] **Pagination**
 
