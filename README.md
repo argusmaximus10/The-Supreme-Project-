@@ -19,7 +19,7 @@ this project is a basic dashboard for a stocking business
 
 | Prénom & Nom | Rôle / Tâches principales | Lien Github |
 |--------------|---------------------------|-------------|
-| Anas Erchicha  | (ex: Dashboard, ChartJS)  | [@argusmaximus10](https://github.com/pseudo) |
+| Anas Erchicha  | (ex: Dashboard, ChartJS)  | [@argusmaximus10](https://github.com/argusmaximus10) |
 | Rayan Ethahiri   | (ex: CRUD Utilisateurs)   | [@pseudo](https://github.com/pseudo) |
 | Adnan El hatab   | (ex: CSS, Responsive)     | [@pseudo](https://github.com/pseudo) |
 
