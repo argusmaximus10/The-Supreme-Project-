@@ -21,7 +21,7 @@ Nom du Groupe : the martey supreme
 |--------------|---------------------------|-------------|
 | Anas Erchicha  | (ex: Dashboard, ChartJS)  | [@argusmaximus10](https://github.com/argusmaximus10) |
 | Rayan Ethahiri   | (ex: CRUD Utilisateurs)   | [@pseudo](https://github.com/pseudo) |
-| Adnan El hatab   | (ex: CSS, Responsive)     | [@pseudo](https://github.com/pseudo) |
+| Adnan El hatab   | (ex: CSS, Responsive)     | [@adnane-elhattab](https://github.com/adnane-elhattab) |
 
 ---
 
