@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro",
+    "category": "Electronics",
+    "price": 1299.99,
+    "stock": 45,
+    "status": "In Stock",
+    "createdAt": "2024-01-10"
+  },
+  {
+    "id": 2,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 120,
+    "status": "In Stock",
+    "createdAt": "2024-01-12"
+  },
+  {
+    "id": 3,
+    "name": "Desk Chair",
+    "category": "Furniture",
+    "price": 199.99,
+    "stock": 25,
+    "status": "Low Stock",
+    "createdAt": "2024-01-05"
+  },
+  {
+    "id": 4,
+    "name": "Coffee Maker",
+    "category": "Home Appliances",
+    "price": 89.99,
+    "stock": 60,
+    "status": "In Stock",
+    "createdAt": "2024-01-18"
+  },
+  {
+    "id": 5,
+    "name": "Notebook Set",
+    "category": "Stationery",
+    "price": 24.99,
+    "stock": 200,
+    "status": "In Stock",
+    "createdAt": "2024-01-20"
+  }
+]

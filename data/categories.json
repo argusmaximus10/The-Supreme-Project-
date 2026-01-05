@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronic devices and accessories",
+    "productCount": 12,
+    "createdAt": "2024-01-01"
+  },
+  {
+    "id": 2,
+    "name": "Furniture",
+    "description": "Office and home furniture",
+    "productCount": 8,
+    "createdAt": "2024-01-02"
+  },
+  {
+    "id": 3,
+    "name": "Home Appliances",
+    "description": "Kitchen and home appliances",
+    "productCount": 15,
+    "createdAt": "2024-01-03"
+  },
+  {
+    "id": 4,
+    "name": "Stationery",
+    "description": "Office supplies and stationery",
+    "productCount": 20,
+    "createdAt": "2024-01-04"
+  },
+  {
+    "id": 5,
+    "name": "Clothing",
+    "description": "Men and women clothing",
+    "productCount": 25,
+    "createdAt": "2024-01-05"
+  }
+]

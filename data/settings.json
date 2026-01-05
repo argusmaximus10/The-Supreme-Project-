@@ -1,0 +1,20 @@
+{
+  "siteName": "Dashboard Pro",
+  "siteUrl": "https://dashboard.example.com",
+  "adminEmail": "admin@example.com",
+  "itemsPerPage": 10,
+  "currency": "USD",
+  "timezone": "UTC",
+  "maintenanceMode": false,
+  "registrationEnabled": true,
+  "notifications": {
+    "email": true,
+    "push": true,
+    "sms": false
+  },
+  "theme": {
+    "primaryColor": "#3498db",
+    "secondaryColor": "#2c3e50",
+    "darkMode": false
+  }
+}

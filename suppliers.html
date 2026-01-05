@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2><i class="fas fa-chart-line"></i> Dashboard</h2>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="dashboard.html">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="users.html">
+                <i class="fas fa-users"></i> Users
+            </a>
+            <a href="products.html">
+                <i class="fas fa-box"></i> Products
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-cart"></i> Orders
+            </a>
+            <a href="categories.html">
+                <i class="fas fa-tags"></i> Categories
+            </a>
+            <a href="suppliers.html" class="active">
+                <i class="fas fa-truck"></i> Suppliers
+            </a>
+            <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <h1>Suppliers Management</h1>
+                <p>Manage your product suppliers</p>
+            </div>
+            <div class="header-right">
+                <div class="date-display" id="currentDate"></div>
+            </div>
+        </header>
+
+        <div class="page-header">
+            <h2 class="page-title">All Suppliers</h2>
+            <div style="display: flex; gap: 10px;">
+                <input type="text" id="supplierSearch" placeholder="Search suppliers..." style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                <button class="btn btn-primary" id="addSupplierBtn">
+                    <i class="fas fa-plus"></i> Add Supplier
+                </button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="suppliersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Contact Person</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Products Supplied</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Suppliers will be loaded here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Supplier Modal -->
+    <div class="modal" id="supplierModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="supplierModalTitle">Add New Supplier</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="supplierForm">
+                <div class="form-group">
+                    <label for="supplierName">Supplier Name *</label>
+                    <input type="text" id="supplierName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="supplierContact">Contact Person *</label>
+                    <input type="text" id="supplierContact" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="supplierEmail">Email *</label>
+                        <input type="email" id="supplierEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="supplierPhone">Phone</label>
+                        <input type="tel" id="supplierPhone">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="supplierAddress">Address</label>
+                    <textarea id="supplierAddress" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="supplierProducts">Products Supplied (comma separated)</label>
+                    <input type="text" id="supplierProducts" placeholder="Electronics, Furniture, Appliances">
+                </div>
+                
+                <div class="form-group">
+                    <label for="supplierStatus">Status</label>
+                    <select id="supplierStatus">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" style="margin-top: 20px;">
+                    <button type="button" class="btn btn-primary" id="saveSupplierBtn">Save Supplier</button>
+                    <button type="button" class="btn" onclick="suppliersManager.hideModal()" style="margin-left: 10px;">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/suppliers.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.getElementById('currentDate');
+            if (dateElement) {
+                const now = new Date();
+                dateElement.textContent = now.toLocaleDateString('en-US', { 
+                    weekday: 'long', 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                });
+            }
+        });
+    </script>
+</body>
+</html>

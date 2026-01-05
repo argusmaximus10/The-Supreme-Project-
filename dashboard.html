@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<script>
+// DIRECT CHART UPDATE - GUARANTEED TO WORK
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Dashboard page loaded, forcing chart update...');
+    
+    // Wait a bit for everything to load, then force update
+    setTimeout(function() {
+        if (window.refreshDashboardCharts) {
+            window.refreshDashboardCharts();
+        } else {
+            // If no function exists, reload the page
+            console.log('No chart function, reloading page...');
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
+        }
+    }, 1000);
+    
+    // Also update on visibility change
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden && window.refreshDashboardCharts) {
+            window.refreshDashboardCharts();
+        }
+    });
+});
+</script>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2><i class="fas fa-chart-line"></i> Dashboard</h2>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="users.html">
+                <i class="fas fa-users"></i> Users
+            </a>
+            <a href="products.html">
+                <i class="fas fa-box"></i> Products
+            </a>
+            <a href="orders.html">
+                <i class="fas fa-shopping-cart"></i> Orders
+            </a>
+            <a href="categories.html">
+                <i class="fas fa-tags"></i> Categories
+            </a>
+            <a href="suppliers.html">
+                <i class="fas fa-truck"></i> Suppliers
+            </a>
+            <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Dashboard Overview</h1>
+                <p>Welcome back, Admin</p>
+            </div>
+            <div class="header-right">
+                <div class="date-display" id="currentDate"></div>
+                <button class="btn btn-primary" onclick="exportData()">
+                    <i class="fas fa-download"></i> Export Data
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #4e73df;">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="usersCount">0</h3>
+                    <p>Total Users</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #1cc88a;">
+                    <i class="fas fa-box"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="productsCount">0</h3>
+                    <p>Total Products</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #f6c23e;">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="ordersCount">0</h3>
+                    <p>Total Orders</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: #e74a3b;">
+                    <i class="fas fa-tags"></i>
+                </div>
+                <div class="stat-info">
+                    <h3 id="categoriesCount">0</h3>
+                    <p>Categories</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-container">
+            <div class="chart-card">
+                <h3>Users Overview</h3>
+                <canvas id="usersChart"></canvas>
+            </div>
+            
+            <div class="chart-card">
+                <h3>Products by Category</h3>
+                <canvas id="productsChart"></canvas>
+            </div>
+            
+            <div class="chart-card">
+                <h3>Monthly Orders</h3>
+                <canvas id="ordersChart"></canvas>
+            </div>
+            
+            <div class="chart-card">
+                <h3>User Activity</h3>
+                <canvas id="activityChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-list" id="activityList">
+                <!-- Activities will be loaded here -->
+            </div>
+        </div>
+
+        <div class="stat-card">
+    <div class="stat-icon" style="background: #6f42c1;">
+        <i class="fas fa-truck"></i>
+    </div>
+    <div class="stat-info">
+        <h3 id="suppliersCount">0</h3>
+        <p>Total Suppliers</p>
+    </div>
+</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

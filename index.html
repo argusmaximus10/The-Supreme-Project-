@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>📊 Dashboard Admin</h1>
+            <p class="subtitle">Sign in to your account</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="admin" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+            
+            <p class="login-footer">
+                Default credentials: admin / admin123
+            </p>
+        </div>
+    </div>
+    
+    <!-- FIRST load utils.js, THEN auth.js -->
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    
+    <!-- Add immediate redirect if already logged in -->
+    <script>
+        // Check if user is already logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = localStorage.getItem('dashboard_user') || sessionStorage.getItem('dashboard_user');
+            if (user) {
+                // Already logged in, redirect immediately
+                window.location.href = 'dashboard.html';
+            }
+            
+            // Add form submission handler directly here as backup
+            const loginForm = document.getElementById('loginForm');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const username = document.getElementById('username').value;
+                    const password = document.getElementById('password').value;
+                    const remember = document.getElementById('remember').checked;
+                    
+                    // Simple authentication
+                    if (username === 'admin' && password === 'admin123') {
+                        const userData = {
+                            id: 1,
+                            username: 'admin',
+                            name: 'Administrator',
+                            role: 'Admin',
+                            email: 'admin@example.com'
+                        };
+                        
+                        if (remember) {
+                            localStorage.setItem('dashboard_user', JSON.stringify(userData));
+                        } else {
+                            sessionStorage.setItem('dashboard_user', JSON.stringify(userData));
+                        }
+                        
+                        // Show success message
+                        alert('Login successful! Redirecting to dashboard...');
+                        
+                        // Redirect to dashboard
+                        window.location.href = 'dashboard.html';
+                    } else {
+                        alert('Invalid credentials! Use: admin / admin123');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
